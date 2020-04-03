@@ -29,7 +29,6 @@ addExpenses = prompt('Перечислите возможные расходы �
 deposit = confirm('Есть ли у вас депозит в банке?');
 
 
-// п.1
 let expenses = [];
 
 const getExpensesMonth = function () {
@@ -51,14 +50,14 @@ const getExpensesMonth = function () {
 let expensesAmount = getExpensesMonth();
 console.log('Расходы за месяц: ', expensesAmount);
 
-// п.2
+
 const getAccumulatedMonth = function(debit, costs) {
     return (debit - costs);
 };
 console.log(getAccumulatedMonth(money,expensesAmount));
-// п.3
+
 let accumulatedMonth = getAccumulatedMonth(money,expensesAmount);
-// п.4
+
 const getTargetMonth = function (purpose, savings) {
     // mission/накопления в месяц;
     let targetMoth = Math.ceil(purpose/savings);
@@ -74,7 +73,7 @@ getTargetMonth(mission,accumulatedMonth);
 
 let budgetDay;
 budgetDay = Math.floor(accumulatedMonth/30);
-// п.7
+
 const showTypeOf = function (variable) {
     return (typeof variable);
 }
