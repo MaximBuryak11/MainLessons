@@ -1,32 +1,45 @@
 'use strict'
 
-let btnCalculate = document.getElementById('start');
+const collection = document.querySelectorAll('.book');
+const adv = document.getElementsByClassName('adv');
 
-let btnPlus = document.getElementsByClassName('btn_plus');
+//console.log(adv);
 
-let chkId = document.querySelector('#deposit-check');
+adv[0].remove();
 
-let addIncItem = document.querySelectorAll('.additional_income-item');
+collection[1].after(collection[0]);
 
-let result = [];
-let len = document.getElementsByClassName('result-total').length;
-for (let i = 1; i < len; i++) {
-    result.push(document.getElementsByClassName('result-total')[i]);
-}
-for (let res of result) {
-    console.log(res);
-  }
+collection[0].after(collection[4]);
 
-  console.log(' ');
-  let data = document.querySelector('.data');
-  let dataLen = data.getElementsByTagName('input').length;
+collection[4].after(collection[3]);
+collection[3].after(collection[5]);
 
-  let leftResult = [];
-  for (let j = 0; j < dataLen; j++) {
-      leftResult.push(data.getElementsByTagName('input')[j]);
-  }
+let body = document.body;
+body.setAttribute('style', 'background-image: url(./image/123.jpg)');
 
-  for (let res of leftResult) {
-    console.log(res);
-  }
+let aa = collection[4].querySelector('[target="_blank"]')
+aa.innerHTML = "Книга 3. this и Прототипы Объектов";
+
+
+let unit2 = collection[0].querySelectorAll('li');
+console.log(unit2);
+unit2[3].after(unit2[6]);
+unit2[6].after(unit2[8]);
+unit2[10].before(unit2[2]);
+
+let unit5 = collection[5].querySelectorAll('li');
+//console.log(unit5);
+unit5[1].after(unit5[9]);
+unit5[4].after(unit5[2]);
+unit5[8].before(unit5[5]);
+//unit5[3].remove();
+
+let li = document.createElement('li');
+console.log(li);
+li.innerHTML = 'Глава 8: За пределами ES6';
+console.log(li);
+let unit6 = collection[2].querySelectorAll('li');
+unit6[9].before(li);
+
+
 
